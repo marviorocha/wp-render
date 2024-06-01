@@ -24,6 +24,11 @@ services:
       name: mysql-wordpress
       type: pserv
       envVarKey: MYSQL_USER
+  - key: WORDPRESS_DB_PORT
+    fromService:
+      name: mysql-wordpress
+      type: pserv
+      envVarKey: MYSQL_PORT
   - key: WORDPRESS_DB_PASSWORD
     fromService:
       name: mysql-wordpress
